@@ -39,16 +39,14 @@
 <div class="dropdown-wrapper" #dropdownmenu [class.isOpen]="isOpen">
 
   <div (click)="toggle()" class="filterOption">
-    <span>Username</span>
-   
-    <p-multiSelect [options]="cities" [panelStyle]="{minWidth:'12em'}" [style]="{minWidth:'12em'}" (onChange)="onChange($event)"></p-multiSelect>
-    <p-multiSelect [options]="cities" [panelStyle]="{minWidth:'12em'}" [style]="{minWidth:'12em'}" (onChange)="usernamechange($event)"></p-multiSelect>
-    <p-multiSelect [options]="cities" [panelStyle]="{minWidth:'12em'}" [style]="{minWidth:'12em'}" (onChange)="onChange($event)"></p-multiSelect>
-    <p-multiSelect [options]="cities" [panelStyle]="{minWidth:'12em'}" [style]="{minWidth:'12em'}" (onChange)="usernamechange($event)"></p-multiSelect>
+    <span>Filter</span>
   </div>
 
   <div class="custom-dropdown" [class.show]="isOpen">
-    <span>Username</span>
+    <p-multiSelect [options]="cities" [panelStyle]="{minWidth:'12em'}" [style]="{minWidth:'12em'}" (onChange)="onChange($event)"></p-multiSelect>
+    <p-multiSelect [options]="cities" [panelStyle]="{minWidth:'12em'}" [style]="{minWidth:'12em'}" (onChange)="usernamechange($event)"></p-multiSelect>
+    <p-multiSelect [options]="cities" [panelStyle]="{minWidth:'12em'}" [style]="{minWidth:'12em'}" (onChange)="onChange($event)"></p-multiSelect>
+    <p-multiSelect [options]="cities" [panelStyle]="{minWidth:'12em'}" [style]="{minWidth:'12em'}" (onChange)="usernamechange($event)"></p-multiSelect>
     <p-multiSelect [options]="cities" [panelStyle]="{minWidth:'12em'}" [style]="{minWidth:'12em'}" (onChange)="usernamechange($event)"></p-multiSelect>
   </div>
 </div>
