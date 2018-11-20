@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild} from '@angular/core';
 import { CustomDropDownService } from './app-service';
 
 @Component({
@@ -13,8 +13,12 @@ export class AppComponent implements OnInit {
     eventtype: [],
     applicationname: []
   }
-cities;
-  constructor(private customDropdownService:CustomDropDownService) {
+  public isOpen:Boolean = false;
+  public cities;
+  
+  @ViewChild('dropdownmenu') dropdownmenu: ElementRef;
+  
+  constructor(private dropdown:CustomDropDownService) {
   }
   ngOnInit() {
     this.cities = [
@@ -24,6 +28,15 @@ cities;
       { label: 'Istanbul', value: { id: 4, name: 'Istanbul', code: 'IST' } },
       { label: 'Paris', value: { id: 5, name: 'Paris', code: 'PRS' } }
     ];
+  }
+  
+  toggle(){
+    this.isOpen = !this.isOpen;
+    if(this.isOpen){
+      this.dropdown.close();
+    }else{
+      this.dropdown.open(this);
+    }
   }
 
   usernamechange = (event) => {
