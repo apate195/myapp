@@ -1,54 +1,32 @@
 <!--The content below is only a placeholder and can be replaced.-->
-
-<!-- <h2>Here are some links to help you start: </h2>
 <div class="wrapper">
   <div class="filterrow">
+    <div class="dropdown-wrapper" #dropdownmenu [class.isOpen]="isOpen">
+      <div (click)="toggle()" class="filterOption">
+        <button class="btn" id="dropdownBasic1" ngbDropdownToggle><i class="pi pi-filter"></i></button>
+      </div>
 
-
-    <div ngbDropdown class="d-inline-block" autoClose="outside">
-      <button class="btn" id="dropdownBasic1" ngbDropdownToggle><i class="pi pi-filter"></i></button>
-      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="filterbody">
+      <div class="custom-dropdown filterbody" [class.show]="isOpen">
         <div class="row">
           <div class="col-md-3">
-              <span>Username</span>
-              <p-multiSelect [options]="cities" [panelStyle]="{minWidth:'12em'}" [style]="{minWidth:'12em'}" (onChange)="usernamechange($event)"></p-multiSelect>
-           
+            <span>Username</span>
+            <p-multiSelect [options]="cities" [panelStyle]="{minWidth:'12em'}" [style]="{minWidth:'12em'}" (onChange)="usernamechange($event)"></p-multiSelect>
+
           </div>
           <div class="col-md-3">
-              <span>EventType</span>
-              <p-multiSelect [options]="cities" [panelStyle]="{minWidth:'12em'}" [style]="{minWidth:'12em'}" (onChange)="eventtypechange($event)"></p-multiSelect>
+            <span>EventType</span>
+            <p-multiSelect [options]="cities" [panelStyle]="{minWidth:'12em'}" [style]="{minWidth:'12em'}" (onChange)="eventtypechange($event)"></p-multiSelect>
           </div>
           <div class="col-md-3">
-              <span>Application Name</span>
-              <p-multiSelect [options]="cities" [panelStyle]="{minWidth:'12em'}" [style]="{minWidth:'12em'}" (onChange)="applicationnamechange($event)"></p-multiSelect>
+            <span>Application Name</span>
+            <p-multiSelect [options]="cities" [panelStyle]="{minWidth:'12em'}" [style]="{minWidth:'12em'}" (onChange)="applicationnamechange($event)"></p-multiSelect>
           </div>
           <div class="col-md-3">
-              <span>Date</span>
-              <p-multiSelect [options]="cities" [panelStyle]="{minWidth:'12em'}" [style]="{minWidth:'12em'}" (onChange)="onChange($event)"></p-multiSelect>
+            <span>Date</span>
+            <p-multiSelect [options]="cities" [panelStyle]="{minWidth:'12em'}" [style]="{minWidth:'12em'}" (onChange)="onChange($event)"></p-multiSelect>
           </div>
         </div>
       </div>
     </div>
-  </div> -->
-  <!-- <div class="Filters">
-  
-  <button type="button" class="btn btn-primary">Filters</button>
-  
-</div> -->
-
-<div class="dropdown-wrapper" #dropdownmenu [class.isOpen]="isOpen">
-
-  <div (click)="toggle()" class="filterOption">
-    <span>Filter</span>
-  </div>
-
-  <div class="custom-dropdown" [class.show]="isOpen">
-    <p-multiSelect [options]="cities" [panelStyle]="{minWidth:'12em'}" [style]="{minWidth:'12em'}" (onChange)="onChange($event)"></p-multiSelect>
-    <p-multiSelect [options]="cities" [panelStyle]="{minWidth:'12em'}" [style]="{minWidth:'12em'}" (onChange)="usernamechange($event)"></p-multiSelect>
-    <p-multiSelect [options]="cities" [panelStyle]="{minWidth:'12em'}" [style]="{minWidth:'12em'}" (onChange)="onChange($event)"></p-multiSelect>
-    <p-multiSelect [options]="cities" [panelStyle]="{minWidth:'12em'}" [style]="{minWidth:'12em'}" (onChange)="usernamechange($event)"></p-multiSelect>
-    <p-multiSelect [options]="cities" [panelStyle]="{minWidth:'12em'}" [style]="{minWidth:'12em'}" (onChange)="usernamechange($event)"></p-multiSelect>
-  </div>
 </div>
-
-  <router-outlet></router-outlet>
+<router-outlet></router-outlet>
