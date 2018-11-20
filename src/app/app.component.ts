@@ -30,6 +30,11 @@ export class AppComponent implements OnInit {
     ];
   }
   
+  getDropdownElement(){
+    return this.dropdownmenu.nativeElement;
+  }
+
+  
   toggle(){
     this.isOpen = !this.isOpen;
     if(this.isOpen){
