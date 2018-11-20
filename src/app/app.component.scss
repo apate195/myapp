@@ -1,0 +1,90 @@
+
+// .wrapper{
+//     border:1px solid #ccc;
+//     height:200px;
+//     position: relative;
+//     padding: 12px;
+//     .filterrow{
+//         width:800px;
+//         height:50px;
+//         top:15%;
+//         position: absolute;
+//         padding: 6px;
+//     }
+// }
+// .filterbody{
+//     width:800px;
+//     height:100px;
+//     padding:12px;
+// }
+.dropdown-wrapper{
+    .custom-dropdown{
+        position: absolute;
+        max-height: 200px;
+        overflow-y: auto;
+        width: 100%;
+        top:-12px;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        float: left;
+        min-width: 10rem;
+        padding: 0.5rem 0;
+        margin: 0.125rem 0 0;
+        font-size: 1rem;
+        color: #212529;
+        text-align: left;
+        list-style: none;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 0.25rem;
+        box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+
+
+        &.show {
+            display: block;
+        }
+    }
+   
+    .filterOption{
+        height:24px;
+        cursor: pointer;
+        .tags{
+            width: 30px;
+            background-color: #e4e4e4;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            margin-right: 6px;
+            padding:3px;
+            font-size: 10px;
+        }
+        .remove{
+            cursor: pointer;
+        }
+    }
+    ul{
+        padding:0; 
+        li{
+            list-style:none;
+            padding:0 8px;
+            label{
+                cursor: pointer;
+                width:100%;
+                font-size: 12px;
+                margin-bottom:2px; 
+                padding: 6px;
+                &.active,&:hover{
+                    background-color: #beebff;
+                }
+            }
+
+        }
+        
+           
+    }
+    
+    
+}
+
+
